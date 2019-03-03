@@ -6,7 +6,7 @@ import pygame
 from random import randint
 
 pygame.init()
-pygame.display.set_caption("打耗子")
+pygame.display.set_caption("badguy")
 
 angle = 0
 
@@ -79,8 +79,8 @@ while True:
 		for i in range(len(bullet_x)):
 			#bullet_x[i] += 5
 			bullet_run_no[i] += 1
-			bullet_x[i] = (cos(bullet_angle[i]) * (5 * bullet_run_no[i])) + bullet_x_start[i]#dule_display_xy[0]  # 宽
-			bullet_y[i] = (sin(bullet_angle[i]) * (5 * bullet_run_no[i])) + bullet_y_start[i]#dule_display_xy[1]  # 长
+			bullet_x[i] = cos(radians(-bullet_angle[i])) * (5 * bullet_run_no[i]) + bullet_x_start[i]#dule_display_xy[0]  # 宽
+			bullet_y[i] = sin(radians(-bullet_angle[i])) * (5 * bullet_run_no[i]) + bullet_y_start[i]#dule_display_xy[1]  # 长
 			#print("num" + str(i) + "x" + str(bullet_x[i]) + "y" + str(bullet_y[i]))
 			bullet_display[i] = pygame.transform.rotate(bullet, bullet_angle[i])
 			screen.blit(bullet_display[i], (bullet_x[i], bullet_y[i]))
@@ -124,6 +124,6 @@ while True:
 			bullet_display.append(pygame.transform.rotate(bullet , angle))
 			bullet_angle.append(angle)
 			bullet_run_no.append(0)
-			bullet_x_start.append(dule_display_xy[0])
-			bullet_y_start.append(dule_display_xy[1])
+			bullet_x_start.append(132)
+			bullet_y_start.append(126)
 	pygame.display.update()
