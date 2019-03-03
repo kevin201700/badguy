@@ -11,10 +11,10 @@ pygame.display.set_caption("打耗子")
 angle = 0
 
 screen = pygame.display.set_mode((640, 480))
-screen_pic = pygame.image.load("grass")
+screen_pic = pygame.image.load("resource/images/grass.png")
 screen_pic = pygame.transform.scale(screen_pic, (640, 480))
 
-bullet = pygame.image.load("bullet")
+bullet = pygame.image.load("resource/images/bullet.png")
 bullet_display = []
 bullet_x = []
 bullet_y = []
@@ -23,18 +23,18 @@ bullet_run_no = []
 bullet_x_start = []
 bullet_y_start = []
 
-pygame.mixer.music.load("moonlight")
+pygame.mixer.music.load("resource/audio/moonlight.wav")
 
-dule = pygame.image.load("dude")
-dule_display = pygame.image.load("dude")
+dule = pygame.image.load("resource/images/dude.png")
+dule_display = pygame.image.load("resource/images/dude.png")
 
 castle = pygame.image.load("castle")
 
 
-badguy = pygame.image.load("badguy")
-badguy_2 = pygame.image.load("badguy2")
-badguy_3 = pygame.image.load("badguy3")
-badguy_4 = pygame.image.load("badguy4")
+badguy = pygame.image.load("resource/images/badguy.png")
+badguy_2 = pygame.image.load("resource/images/badguy2.png")
+badguy_3 = pygame.image.load("resource/images/badguy3.png")
+badguy_4 = pygame.image.load("resource/images/badguy4.png")
 badguy_x = []
 badguy_y = []
 badguy_no = []
