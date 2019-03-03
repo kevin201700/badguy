@@ -28,7 +28,7 @@ pygame.mixer.music.load("resource/audio/moonlight.wav")
 dule = pygame.image.load("resource/images/dude.png")
 dule_display = pygame.image.load("resource/images/dude.png")
 
-castle = pygame.image.load("castle")
+castle = pygame.image.load("resource/images/castle.png")
 
 
 badguy = pygame.image.load("resource/images/badguy.png")
@@ -75,15 +75,6 @@ while True:
 				screen.blit(badguy_3, (badguy_x[i], badguy_y[i]))
 			elif badguy_no[i] == 4:
 				screen.blit(badguy_4, (badguy_x[i], badguy_y[i]))
-#=====================剑出现======================
-		if time_us % 10 == 0:
-			bullet_x.append(132)
-			bullet_y.append(126)
-			bullet_display.append(pygame.transform.rotate(bullet , angle))
-			bullet_angle.append(angle)
-			bullet_run_no.append(0)
-			bullet_x_start.append(dule_display_xy[0])
-			bullet_y_start.append(dule_display_xy[1])
 #============================剑移动====================
 		for i in range(len(bullet_x)):
 			#bullet_x[i] += 5
@@ -126,4 +117,13 @@ while True:
 		if event.type == pygame.QUIT:
 			pygame.quit()
 			exit()
+#=====================剑出现======================
+		if event.type == pygame.MOUSEBUTTONDOWN:
+			bullet_x.append(132)
+			bullet_y.append(126)
+			bullet_display.append(pygame.transform.rotate(bullet , angle))
+			bullet_angle.append(angle)
+			bullet_run_no.append(0)
+			bullet_x_start.append(dule_display_xy[0])
+			bullet_y_start.append(dule_display_xy[1])
 	pygame.display.update()
